@@ -1,48 +1,47 @@
 # LectureRecognizer
 
-## Описание
+## Description
 
-**LectureRecognizer** — это веб-приложение, разработанное на базе Java Spring, которое позволяет автоматически распознавать аудиофайлы лекций с помощью **Whisper API**, а затем генерировать их подробные пересказы, используя **Llama 3.1 8b**. Это идеальный инструмент для студентов, преподавателей и исследователей, которые хотят быстро получить текстовую версию лекции и краткий пересказ для более легкого понимания.
+**LectureRecognizer** is a web application built on Java Spring that enables automatic recognition of lecture audio files using the **Whisper API** and generates detailed summaries using **Llama 3.1 8b**. This is an ideal tool for students, educators, and researchers who want to quickly obtain a text version of a lecture and a concise summary for easier understanding.
 
-## Основные функции
+## Key Features
 
-- **Распознавание речи**: Автоматическое преобразование аудиофайлов (формата WAV) в текст с использованием Whisper.
-- **Разбиение текста**: Интеллектуальное разбиение текста на части по 1000 токенов с помощью TokenCounter для более эффективной обработки.
-- **Суммаризация текста**: Генерация кратких пересказов текста с использованием модели Llama 3.1.
-- **Поддержка Markdown**: Полученный текст отображается в удобочитаемом формате Markdown.
-- **Простота использования**: Загружайте аудиофайлы и получайте текстовые и пересказанные версии лекций через простой веб-интерфейс.
+- **Speech Recognition**: Automatic conversion of audio files (WAV format) to text using Whisper.
+- **Text Segmentation**: Intelligent text segmentation into 1000-token chunks using TokenCounter for more efficient processing.
+- **Text Summarization**: Generation of concise text summaries using the Llama 3.1 model.
+- **Markdown Support**: The resulting text is displayed in a readable Markdown format.
+- **Ease of Use**: Upload audio files and receive text and summarized versions of lectures through a simple web interface.
 
-## Технологии
+## Technologies
 
-- **Java 17**
+- **Java**
 - **Spring Boot**
-- **Thymeleaf** — шаблонизатор для отображения данных.
-- **Whisper API** — для распознавания речи.
-- **Llama 3.1 API** — для генерации кратких пересказов.
-- **Docker** — для контейнеризации приложения.
-- **Docker Compose** — для удобного развёртывания всех сервисов.
+- **Thymeleaf** — a templating engine for data rendering.
+- **Whisper** — for speech recognition.
+- **OLlama** — for generating concise summaries.
+- **Docker** — for application containerization.
 
-## Установка и использование
+## Installation and Usage
 
-### 1. Клонирование репозитория
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/unrlight/LectureRecognizer.git
 cd LectureRecognizer
 ```
 
-### 2. Запуск с помощью Docker Compose
+### 2. Start with Docker Compose
 
-Убедитесь, что у вас установлены Docker и Docker Compose.
+Ensure that Docker and Docker Compose are installed.
 
 ```bash
 docker-compose up --build
 ```
 
-Это запустит приложение и все необходимые сервисы. Приложение будет доступно по адресу `http://localhost:8080`.
+This will start the application and all necessary services. The application will be available at `http://localhost:8080`.
 
-### 3. Использование
+### 3. Usage
 
-1. Перейдите по адресу `http://localhost:8080`.
-2. Загрузите аудиофайл в формате WAV.
-3. Получите текстовую версию лекции и краткий пересказ в формате Markdown.
+1. Navigate to `http://localhost:8080`.
+2. Upload an audio file in WAV format.
+3. Obtain the text version of the lecture and a concise summary in Markdown format.
