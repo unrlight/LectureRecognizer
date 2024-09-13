@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Lecture Recognizer</title>
 </head>
 <body>
-$END$
+    <h1>Загрузите аудио файл для распознавания</h1>
+    <form method="post" enctype="multipart/form-data" th:action="@{/audio/upload}">
+        <input type="file" name="file" accept="audio/wav"/>
+        <button type="submit">Загрузить</button>
+    </form>
+    <div th:if="${result}">
+        <h2>Результат:</h2>
+        <pre th:text="${result}"></pre>
+    </div>
 </body>
 </html>
